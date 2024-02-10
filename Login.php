@@ -47,7 +47,7 @@
 </nav>
 
 <div style=" width:1550px; height:700px; background-image:url('back.jpg'); ">
-<div style=" width:350px; height: 330px; top:20%; left:40%; transform: translate (-30%,-30%); position:absolute; background-color:#FFFFCC;">
+<div style=" width:350px; height: 330px; top:15%; left:40%; transform: translate (-30%,-30%); position:absolute; background-color:#FFFFCC;">
 <div id="cont" height="200px" Width="200px" >
 <form method="Post" action="Login_Authentication.php">
     <center>
