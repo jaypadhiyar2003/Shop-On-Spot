@@ -11,7 +11,7 @@
     <title>Shop On Spot</title>
     <link rel="stylesheet"  href="home_style.css">
 </link>
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale =1.0,user-scalable=no">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 <style>
@@ -69,6 +69,27 @@
   text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 }
 
+.card{
+    width: 18%;
+    float: left;
+    margin:1%;
+  }
+
+@media only screen and (min-width: 200px) and (max-width: 567px){
+  .card{
+    width: 48%;
+    margin:1%;
+    float: left;
+  }
+}
+
+@media only screen and (min-width: 568px) and (max-width: 992px){
+  .card{
+    width: 22%;
+    margin:1%;
+    float: left;
+  }
+}
 
 </style>
 
@@ -139,10 +160,19 @@ if(isset($_SESSION["cust_id"]))
   
 } */
 ?>
-
-<table>   
+<!--
+  <img  src="..." alt="Card image cap">
+  
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <a href="#" class="btn btn-primary">Go somewhere</a>
+  </div>
+        -->
+  
 <?php
 
+
+/*declare variables
+//
 
 
 
@@ -165,26 +195,31 @@ while($row=mysqli_fetch_array($run_que2))
         $i++;
 
      ?>
-          <td><?php  echo '<a href="detail.php?Prod_id='. $Prodid. '"><img src="uploads/'.$row['Prod_img'].'" width="200px;" height="200px;" alt="image"> <br><center>'.$name.'<br> Price :'.$price.'</center></a>'; ?></td>
+          <?php  echo '<div class="card" style="height:380px;">   <a href="detail.php?Prod_id='. $Prodid. '"><img class="card-img-top" src="uploads/'.$row['Prod_img'].'" width="200px;" height="200px;" alt="image"><div class="card-body">
+    <h5 class="card-title"><br><center>'.$name.'</h5> <br> Price :'.$price.'</center></a></div> </div>'; ?>
     <?php
 
     if($i==7){
          echo '<tr></tr>';
          $i=0;
     }
-    ?>
     
+    ?>
     <?php
     
 }
 }
+
+
+
 else{
 
 
 
 ?>
-</table>
-<table>
+
+
+
 <?php
 $cat=$_GET["Prod_Cat"];
 
@@ -201,7 +236,7 @@ while($row1=mysqli_fetch_array($run_que3))
         $i1++;
 
      ?>
-          <td><?php  echo '<a href="detail.php?Prod_id='. $Prodid1. '"><img src="uploads/'.$row1['Prod_img'].'" width="200px;" height="200px;" alt="image"> <br><center>'.$name1.'<br> Price :'.$price1.'</center></a>'; ?></td>
+          <?php  echo '<a href="detail.php?Prod_id='. $Prodid1. '"><img src="uploads/'.$row1['Prod_img'].'" width="200px;" height="200px;" alt="image"> <br><center>'.$name1.'<br> Price :'.$price1.'</center></a>'; ?>
     <?php
 
     if($i1==7){
@@ -215,20 +250,13 @@ while($row1=mysqli_fetch_array($run_que3))
 }
 }
 ?>
-</table>
 
 
-    <!-- Optional JavaScript; choose one of the two! -->
+    <!-- -->
 
-    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <!-- -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
-
-    <!-- Option 2: Separate Popper and Bootstrap JS -->
-    <!--
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
-    -->
-   <script src= "https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<!-- -->   <script src= "https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 
 
 
@@ -241,10 +269,10 @@ while($row1=mysqli_fetch_array($run_que3))
 
 
   <section
-    class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom"
+    class="d-flex justify-content-center justify-content-md-between p-4 border-bottom"
   >
     <!-- Left -->
-    <div class="me-5 d-none d-lg-block">
+    <div class="me-5 d-none d-md-block">
       <span>Get connected with us on social networks:</span>
     </div>
     <!-- Left -->

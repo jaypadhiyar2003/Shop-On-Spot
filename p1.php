@@ -6,20 +6,7 @@
  <table border="1">   
 <?php
 include 'cn.php';
-/*declare variables
-$dbhost = 'localhost';  //Default hostname
-$dbuser = 'root'; //Default username
-$dbpass = ''; //Default password
-$dbname = 'shoponspot'; //your database name
 
-//Create connection using object oriented way
-$con=mysqli_connect($dbhost,$dbuser);
-$sel=mysqli_select_db($con,$dbname);
-//Check Connection
-if (!$con) {
-    echo "Connect failed: <br />";
-}
-*/
 $que2="SELECT  `Prod_name`,  `Prod_Price`, `Prod_img` FROM `product`";
 $run_que2=mysqli_query($con,$que2);
 

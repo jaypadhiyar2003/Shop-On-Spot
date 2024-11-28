@@ -7,7 +7,7 @@
 
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <div class="container-fluid"><img src="/Shop On Spot/logo.png" height="80px" width="130px"></img>
+        <div class="container-fluid"><img src="/Shop On Spot/Logosop.png" height="80px" width="130px"></img>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>

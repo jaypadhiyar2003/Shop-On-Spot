@@ -2,16 +2,7 @@
 require('vendor/fpdf/fpdf.php');
 
 include 'cn.php';
-/*
-$con=mysqli_connect("localhost","root");
-$select=mysqli_select_db($con,"shoponspot");
-if(!$con){
-    echo "Connection Failed";
-}
-if(!$select){
-    echo "Database connection faied";
-}
-*/
+
 $oid=$_POST["oid"];
 session_start();
 $cid=$_SESSION["cust_id"];
@@ -84,60 +75,6 @@ $i=0;
     $pdf->Cell(30,10,'',0,0);
     $pdf->cell(50,10,"Grand Total:",1,0);
     $pdf->Cell(20,10,$finaltotal,1,1);
-/*
-
-require('vendor\mpdf\vendor\mpdf\mpdf\src\Mpdf.php');
-
-
-if(isset($_SESSION['Product_cart']) && !empty($_SESSION['Product_cart'])){
-    $data ='';
-    $data .= "<table align='center' width='100%'>";
-    $data .="<tr align='center'>";
-    $data .="<th>Sr no.</th>";
-    $data .="<th>Name</th>";
-    $data .="<th>Price</th>";
-    $data .="<th>Quantity</th>";
-
-    $data .= "</tr>";
-    
-        $data .= "<tr align='center'>";
-        $data .= "<td>$i</td>";
-        $data .= "<td><img src='uploads/{$row['Prod_img']}' style='width:100px;'></td>";
-        $data .="<td>{}</td>";
-        $data .= "<td>{}</td>";
-        $data .= "<td>$qty</td>";
-        $data .="<td>$subtotal</td>";
-        $data .= "</tr>";
-       $grandtotal[]=$subtotal;
-       
-    }
-
-    
-
-    $data .= "<tr>";
-    $data .= "<td></td>";
-    $data .= "<td></td>";
-    $data .= "<td></td>";
-    $data .= "<td></td>";
-    $data .= "<td></td>";
-    $data .= "<td><center>$finaltotal</center></td>";
-    $data .= "</tr>";
-    $data .= "</table>";
-    
-
-    $mpdf = new \mPDF();
-
-    $mpdf->WriteHTML($data);
-
-    $mpdf->Output('myfile.pdf','D');
-  
-}*/
-
-
-
-
-
-
 
 $pdf->Output(); 
 unset($_SESSION['Product_cart']);

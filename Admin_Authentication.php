@@ -13,7 +13,7 @@ if(!$select){
 
 $id=$_POST['adminid'];
 $password=$_POST['password'];
-$que=mysqli_query($con,"Select * from Admin where Admin_id=$id and Password=$password;");
+$que=mysqli_query($con,"Select * from Admin where Admin_id='$id' and Password='$password';");
 
 if($que){
     //echo "runed";
@@ -21,7 +21,7 @@ if($que){
     //header('Location:Admin_home.php');
 }
 else{
-    echo "<script>alert('Login_id or password is incorrect.'); window.location = './Admin_Authentication.php';</script>";
+    echo "<script>alert('Login id or password is incorrect.'); window.location = './Admin_Authentication.php';</script>";
     //echo "Login_id and password are incorrect";
 }
 ?>

@@ -1,17 +1,6 @@
 <?php
 include 'cn.php';
-/*
 
-$con=mysqli_connect("localhost","root");
-$select=mysqli_select_db($con,"shoponspot");
-if(!$con){
-    echo "Connection Failed";
-}
-if(!$select){
-    echo "Database connection faied";
-}
-
-*/
  session_start();
  if(!isset($_SESSION["cust_id"])){
         echo "You are not Logined . So Login first.";

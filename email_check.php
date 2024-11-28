@@ -1,16 +1,7 @@
 <?php
 
 include 'cn.php';
-/*
-$con=mysqli_connect("localhost","root");
-$select=mysqli_select_db($con,"shoponspot");
-if(!$con){
-    echo "Connection Failed";
-}
-if(!$select){
-    echo "Database connection faied";
-}
-*/
+
 
 
 $fname=$_POST['fname'];

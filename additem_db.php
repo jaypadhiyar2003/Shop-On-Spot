@@ -1,7 +1,7 @@
 
 <?php
 include 'cn.php';
-/*declare variables
+<!-- -->
 $dbhost = 'localhost';  //Default hostname
 $dbuser = 'root'; //Default username
 $dbpass = ''; //Default password

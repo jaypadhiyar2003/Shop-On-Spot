@@ -52,20 +52,6 @@ if(isset($_SESSION['Product_cart']) && !empty($_SESSION['Product_cart'])){
 
 
 
-/*declare variables
-$dbhost = 'localhost';  //Default hostname
-$dbuser = 'root'; //Default username
-$dbpass = ''; //Default password
-$dbname = 'shoponspot'; //your database name
-
-//Create connection using object oriented way
-$con=mysqli_connect($dbhost,$dbuser);
-$sel=mysqli_select_db($con,$dbname);
-//Check Connection
-if (!$con) {
-    echo "Connect failed: <br />";
-}
-*/
 
 
 $que="SELECT * FROM `customer` WHERE `cust_id`='{$cid}'";
@@ -77,56 +63,6 @@ $row6=mysqli_fetch_array($que4);
 $oid=$row6[0];
 $msg="Hurrey!!!\n\n Hello user you order is placed and will be deleverd within 7 working days. \n  \n \n Here is some details of the orderd placed \n \n \n
 <html><body><table><tr><th>Order Id</th><th>Total Price</th><th>Adress to Delever</th></tr><tr><td>$oid</td><td>$ftotal</td><td>$gc</td></tr></table></body></html> \n \n \n we will request you to download the invoice \n \n \n thank you for trusting the Shop On Spot";
-  /*<table align='center' width='100%'><tr align='center'>
-    <th>Sr no.</th>
-    <th>Name</th>
-    <th>Price</th>
-    <th>Quantity</th>
-
-    </tr>
-    <?php
-    $i=0;
-    $grandtotal=array();
-    $grandqty=array();
-    foreach($_SESSION['Product_cart'] as $key=>$value){
-        $i++;
-        $productq=mysqli_query($con,"SELECT * FROM `product` WHERE `Prod_id`='{$value}'") or die(mysqli_error($con));
-        $row=mysqli_fetch_array($productq);
-        
-        $qty=$_SESSION['qtyitem'][$key];
-        $subtotal=$row['Prod_Price'] * $qty;
-        ?>
-       <tr align='center'>
-       <td><?php echo $i; ?></td>
-       <td><?php echo {$row['Prod_name']}; ?></td>
-       <td><?php echo {$row['Prod_Price']}; ?></td>
-       <td><?php echo $qty; ?></td>
-       <td><?php echo $subtotal; ?></td>
-       </tr>
-       <?php
-       $grandtotal[]=$subtotal;
-       $grandqty[]=$qty;
-       $grandprod[]=$value;
-       //print_r($value);
-       
-    }
-
-    $finaltotal=array_sum($grandtotal);
-    $finalqty=base64_encode(serialize($grandqty));
-    $finalprod=base64_encode(serialize($grandprod));
-    ?>
-    <tr>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td><center><?php echo $finaltotal; ?></center></td>
-    </tr>
-
-  </table>";*/
-//if($count>0){
-  //  $password=$row['Password'];
     
 //Import PHPMailer classes into the global namespace
 //These must be at the top of your script, not inside a function
@@ -247,17 +183,11 @@ else{
 
 
 
-    <!-- Optional JavaScript; choose one of the two! -->
+    <!-- -->
 
-    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <!-- -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
-
-    <!-- Option 2: Separate Popper and Bootstrap JS -->
-    <!--
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
-    -->
-   <script src= "https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<!-- -->   <script src= "https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 
 
   </body>
