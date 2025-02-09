@@ -23,7 +23,7 @@ else{
 
 $id=$_SESSION['cust_id'];
 
-<!-- -->
+/*
 $dbhost = 'localhost';  //Default hostname
 $dbuser = 'root'; //Default username
 $dbpass = ''; //Default password

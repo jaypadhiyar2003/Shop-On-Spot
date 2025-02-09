@@ -14,7 +14,6 @@ if(!$select){
 $id=$_POST['eid'];
 $password=$_POST['password'];
 $que=mysqli_query($con,"Select * from customer where email='$id' and Password='$password';");
-echo "hi";
 
 if(isset($que)){
     $que1=mysqli_query($con,"SELECT * FROM `customer` WHERE `email`='{$id}'");

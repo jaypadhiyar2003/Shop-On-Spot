@@ -1,8 +1,5 @@
 <?php
 include 'cn.php';
-<!-- -->
-//
-
 ?>
 
 <!doctype html>

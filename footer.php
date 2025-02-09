@@ -1,48 +1,99 @@
-<!DOCTYPE html>
-<!-- Created By CodingLab - www.codinglabweb.com -->
-<html lang="en" dir="ltr">
-  <head>
-    <meta charset="UTF-8">
-    <!--<title> Responsive Footer | CodingLab </title>-->
-    <link rel="stylesheet" href="style.css">
-    <!-- Fontawesome CDN Link -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"/>
-     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   </head>
-<body>
-<section class="footer">
 
-   <div class="box-container">
+<!-- Footer -->
+<footer class="text-center text-lg-start bg-dark text-muted">
+  <!-- Section: Social media -->
+ 
 
-      <div class="box">
-         <h3>quick links</h3>
-         <a href="welcome.php">home</a>
-         <a href="about.php">about</a>
-         <a href="shop.php">shop</a>
-         <a href="contact.php">contact</a>
+
+  <section
+    class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom"
+  >
+    <!-- Left -->
+    <div class="me-5 d-none d-lg-block">
+      <span>Get connected with us on social networks:</span>
+    </div>
+    <!-- Left -->
+
+    <!-- Right -->
+    <div>
+    <a href="https://instagram.com/itzklp_?utm_medium=copy_link" class="fa fa-instagram"></a>
+    <a href="" class="fa fa-snapchat-ghost"></a>
+    <a href="https://www.facebook.com/padhiyar.jay.583" class="fa fa-facebook"></a>
+    <a href="" class="fa fa-twitter"></a>
+  
+    </div>
+    <!-- Right -->
+  </section>
+
+
+
+  <!-- Section: Social media -->
+
+  <!-- Section: Links  -->
+  <section class="">
+    <div class="container text-center text-md-start mt-5">
+      <!-- Grid row -->
+      <div class="row mt-3">
+        <!-- Grid column -->
+        <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+          <!-- Content -->
+          <h6 class="text-uppercase fw-bold mb-4">
+            <i class="fas fa-gem me-3"></i>Shop On Spot
+          </h6>
+          <p>
+          The Shop On Spot is a online shoping website (E-Commerce website) Which is created for the project(semester-6).
+          </p>
+        </div>
+        <!-- Grid column -->
+
+        <!-- Grid column -->
+      
+        <!-- Grid column -->
+
+        <!-- Grid column -->
+        <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+          <!-- Links -->
+          <h6 class="text-uppercase fw-bold mb-4">
+            Useful links
+          </h6>
+         
+          <p>
+            <a href="signin.html" class="text-reset">Register</a>
+          </p>
+          <p>
+            <a href="userprofile.php" class="text-reset">Orders</a>
+          </p>
+          <p>
+            <a href="About.php" class="text-reset">About Us</a>
+          </p>
+        </div>
+        <!-- Grid column -->
+
+        <!-- Grid column -->
+        <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+          <!-- Links -->
+          <h6 class="text-uppercase fw-bold mb-4">
+            Contact
+          </h6>
+          <p><i class="fas fa-home me-3"></i>BBIT POLYTECHENIC , VVNAGAR</p>
+          <p>
+            <i class="fas fa-envelope me-3"></i>
+            kalpdalsania@gmail.com
+          </p>
+          <p><i class="fas fa-phone me-3"></i> + 91 96870 01314</p>
+          <p><i class="fas fa-print me-3"></i> + 91 94297 39261</p>
+        </div>
+        <!-- Grid column -->
       </div>
+      <!-- Grid row -->
+    </div>
+  </section>
+  <!-- Section: Links  -->
 
-      <div class="box">
-         <h3>extra links</h3>
-         <a href="login.php">login</a>
-         <a href="register.php">register</a>
-         <a href="cart.php">cart</a>
-         <a href="orders.php">orders</a>
-      </div>
-
-      <div class="box">
-         <h3>contact info</h3>
-         <p> <i class="fas fa-phone"></i> +123-456-7890 </p>
-         <p> <i class="fas fa-phone"></i> +111-222-3333 </p>
-         <p> <i class="fas fa-envelope"></i> msv2004@gmail.com </p>
-         <p> <i class="fas fa-map-marker-alt"></i> Anand, India - 388001 </p>
-      </div>
-
-
-   </div>
-
-   <p class="credit"> &copy; copyright  @ <?php echo date('Y'); ?> by <span>Group No:6</span> </p>
-
-</section>
-</body>
-</html>
+  <!-- Copyright -->
+  <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
+    © 2021 Copyright:
+    <a class="text-reset fw-bold">ShopOnSpot.com</a>
+  </div>
+  <!-- Copyright -->
+</footer>
